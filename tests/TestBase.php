@@ -2,10 +2,10 @@
 
 namespace NotificationChannels\Gammu\Test;
 
-use NotificationChannels\Gammu\GammuServiceProvider;
-use Orchestra\Testbench\TestCase;
 use Mockery;
 use Faker\Factory;
+use Orchestra\Testbench\TestCase;
+use NotificationChannels\Gammu\GammuServiceProvider;
 
 abstract class TestBase extends TestCase
 {

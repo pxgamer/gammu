@@ -4,12 +4,12 @@ namespace NotificationChannels\Gammu\Test;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Notifications\Notification;
-use NotificationChannels\Gammu\Drivers\RedisDriver;
 use NotificationChannels\Gammu\GammuChannel;
 use NotificationChannels\Gammu\GammuMessage;
+use NotificationChannels\Gammu\Models\Phone;
 use NotificationChannels\Gammu\Drivers\DbDriver;
 use NotificationChannels\Gammu\Drivers\ApiDriver;
-use NotificationChannels\Gammu\Models\Phone;
+use NotificationChannels\Gammu\Drivers\RedisDriver;
 
 class GammuChannelTest extends TestBase
 {

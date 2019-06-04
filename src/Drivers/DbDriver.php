@@ -2,12 +2,12 @@
 
 namespace NotificationChannels\Gammu\Drivers;
 
+use Exception;
 use Illuminate\Contracts\Config\Repository;
+use NotificationChannels\Gammu\Models\Phone;
 use NotificationChannels\Gammu\Models\Outbox;
 use NotificationChannels\Gammu\Models\OutboxMultipart;
-use NotificationChannels\Gammu\Models\Phone;
 use NotificationChannels\Gammu\Exceptions\CouldNotSendNotification;
-use Exception;
 
 class DbDriver extends DriverAbstract
 {
@@ -214,7 +214,7 @@ class DbDriver extends DriverAbstract
         $ref = mt_rand(0, 255);
         $i = 1;
         $firstUDH = $this->generateUDH($messagesCount, $i, $ref);
-        ++$i;
+        $i++;
 
         $this->data['TextDecoded'] = $firstChunk;
         $this->data['UDH'] = $firstUDH;
@@ -226,7 +226,7 @@ class DbDriver extends DriverAbstract
                 'TextDecoded' => $chunk,
                 'SequencePosition' => $i,
             ]);
-            ++$i;
+            $i++;
         }
 
         $this->isLongSms = true;

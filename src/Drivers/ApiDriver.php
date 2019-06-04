@@ -2,8 +2,8 @@
 
 namespace NotificationChannels\Gammu\Drivers;
 
-use Illuminate\Contracts\Config\Repository;
 use GuzzleHttp\Client;
+use Illuminate\Contracts\Config\Repository;
 use NotificationChannels\Gammu\Exceptions\CouldNotSendNotification;
 
 class ApiDriver extends DriverAbstract

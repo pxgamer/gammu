@@ -2,8 +2,8 @@
 
 namespace NotificationChannels\Gammu\Test;
 
-use FilesystemIterator;
 use DB;
+use FilesystemIterator;
 
 class MigrationTest extends TestBase
 {

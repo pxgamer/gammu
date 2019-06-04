@@ -2,11 +2,11 @@
 
 namespace NotificationChannels\Gammu\Test\Drivers;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use NotificationChannels\Gammu\Test\TestBase;
 use NotificationChannels\Gammu\Drivers\ApiDriver;
 use NotificationChannels\Gammu\Exceptions\CouldNotSendNotification;
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
 
 class ApiDriverTest extends TestBase implements DriverTestInterface
 {

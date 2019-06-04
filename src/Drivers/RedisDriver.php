@@ -2,9 +2,8 @@
 
 namespace NotificationChannels\Gammu\Drivers;
 
-use Illuminate\Contracts\Config\Repository;
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Contracts\Config\Repository;
 use NotificationChannels\Gammu\Exceptions\CouldNotSendNotification;
 
 class RedisDriver extends DriverAbstract
@@ -34,17 +33,18 @@ class RedisDriver extends DriverAbstract
         $this->setDestination($phoneNumber);
         $this->setContent($content);
         $this->setChannel($channel);
-        
+
         Redis::publish($this->channel, json_encode([
             'to' => $this->destination,
             'message' => $this->content,
-            'callback' => $this->callback
+            'callback' => $this->callback,
         ]));
     }
 
     public function setChannel($channel)
     {
-        $this->channel = !$channel ? 'gammu-channel' : $channel;
+        $this->channel = ! $channel ? 'gammu-channel' : $channel;
+
         return $this;
     }
 

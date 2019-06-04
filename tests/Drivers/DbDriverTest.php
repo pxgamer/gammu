@@ -2,11 +2,11 @@
 
 namespace NotificationChannels\Gammu\Test\Drivers;
 
+use NotificationChannels\Gammu\Models\Phone;
+use NotificationChannels\Gammu\Models\Outbox;
 use NotificationChannels\Gammu\Test\TestBase;
 use NotificationChannels\Gammu\Drivers\DbDriver;
 use NotificationChannels\Gammu\Exceptions\CouldNotSendNotification;
-use NotificationChannels\Gammu\Models\Phone;
-use NotificationChannels\Gammu\Models\Outbox;
 
 class DbDriverTest extends TestBase
 {
